@@ -1,24 +1,22 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import Logo from './Logo';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import Logo from "./Logo";
 
 const NavBar = () => {
   return (
-    <nav className='navbar'>
+    <nav className="navbar">
       {<Logo />}
-      <ul>
-        <NavLink to='/'>
+      <ul className="navigation-links">
+        <NavLink to="/">
           <li>Accueil</li>
         </NavLink>
-        <NavLink to='/'>
+        <NavLink to="/">
           <li>Défis</li>
         </NavLink>
-        <NavLink to='/'>
+        <NavLink to="/">
           <li>Fonctionnement</li>
         </NavLink>
       </ul>
-
-
     </nav>
   );
 };

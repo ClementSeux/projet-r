@@ -1,15 +1,15 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <div>
+    <div className="table-navigation">
       <ul>
-       <NavLink to='/projets' >
-        <li>Projets</li>
+        <NavLink to="/projets">
+          <li>Projets</li>
         </NavLink>
-       <NavLink to='/transactions' >
-        <li>Transactions</li>
+        <NavLink to="/transactions">
+          <li>Transactions</li>
         </NavLink>
       </ul>
     </div>

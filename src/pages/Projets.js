@@ -10,7 +10,7 @@ const Projets = () => {
     <div className="container">
       {<Navbar />}
       {<Header />}
-      <div>
+      <div className="table-head">
         {<Navigation />}
         {<Filters />}
       </div>

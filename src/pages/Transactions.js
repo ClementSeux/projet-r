@@ -10,7 +10,7 @@ const Transactions = () => {
     <div className="container">
       {<Navbar />}
       {<Header />}
-      <div>
+      <div className="table-head">
         {<Navigation />}
         {<Filters />}
       </div>
