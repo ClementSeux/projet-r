@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap");
+
+$base-color: rgb(88, 136, 121);
+$secondary-color: rgb(201, 209, 206);
+$shadow-color: #0d2750;
+
+html,
+body {
+  max-width: 100%;
+
+  margin: 0;
+  padding: 0;
+  font-family: "Crimson Text", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+#root,
+.container {
+  width: 100%;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.navbar {
+  z-index: 900;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  margin: 0;
+  padding: 10px 0 20px 0;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  & > div {
+    height: 100%;
+    margin: 10px 15px 10px 15px;
+  }
+}
+
+.logo-site {
+  height: 100%;
+}
+
+.navigation-links {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+
+  & > * {
+    text-decoration: none;
+    width: fit-content;
+    font-weight: 600;
+    font-size: large;
+
+    &:link {
+      color: #000;
+    }
+    &:visited {
+      color: #000;
+    }
+    &:hover {
+      color: $base-color;
+    }
+    &:active {
+      color: $base-color;
+    }
+  }
+}
+
+.header {
+  background: linear-gradient($base-color, #fff);
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  & > * {
+    margin: 15px 20px 30px 20px;
+  }
+}
+
+.table-head {
+  z-index: 900;
+  margin: 0;
+  width: 100%;
+  background-color: #fff;
+  position: sticky;
+  top: 70px;
+}
+
+.table-navigation > ul {
+  width: 100%;
+  margin: 5px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  list-style-type: none;
+
+  & > * {
+    background-color: $secondary-color;
+    border-radius: 15px 15px 0% 0%;
+    padding: 15px 15px 5px 15px;
+
+    text-decoration: none;
+    width: fit-content;
+    font-weight: 700;
+
+    &:link {
+      color: $base-color;
+    }
+    &:visited {
+      color: $base-color;
+    }
+    &:hover {
+      color: #000;
+    }
+    &:active {
+      color: #000;
+    }
+  }
+}
+
+.active-link {
+  position: relative;
+  &::after {
+    content: "";
+    height: 4px;
+    width: 0;
+    background: $base-color;
+    position: absolute;
+    border-radius: 10px;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-animation: anim 0.3s ease forwards;
+    animation: anim 0.6s ease forwards;
+
+    @-webkit-keyframes anim {
+      to {
+        width: 100%;
+      }
+    }
+    @keyframes anim {
+      to {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.filterbar {
+  background-color: $secondary-color;
+  height: 60px;
+  width: 100%;
+  margin: 0;
+  padding: 25px 0px 25px 0px;
+
+  & > div {
+    border-radius: 5% / 50%;
+    margin: 0 auto 0 auto;
+    padding: 5px 50px 5px 50px;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    background-color: $secondary-color;
+    filter: saturate(101%);
+    filter: drop-shadow(6px 6px 6px $shadow-color)
+      drop-shadow(-5px -5px 5px #ffffff77);
+  }
+
+  & > div > * {
+    margin: 0 10px 0 10px;
+  }
+}
+
+.forbidden-logo {
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.table-container {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+@mixin card {
+  background-color: #eee;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  filter: drop-shadow(5px 5px 5px $shadow-color);
+  margin: 10px 15px 10px 15px;
+  padding: 0;
+  & > * {
+    padding: 0;
+  }
+}
+
+.card-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & > * {
+    padding: 5px 0 5px 0;
+    margin: 0;
+  }
+}
+
+.project-card {
+  @include card;
+}
+
+.transaction-card {
+  @include card;
+}
+
+.multiline-paragraphe {
+  width: 30%;
+  min-width: 200px;
+}
+
+button {
+  background-color: $base-color;
+  color: #fff;
+  padding: 4px;
+  white-space: normal;
+  width: 80%;
+  border: solid transparent 1px;
+  filter: drop-shadow(2px 2px 1px $shadow-color);
+}
